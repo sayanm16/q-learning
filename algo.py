@@ -1,6 +1,8 @@
 import streamlit as st
 import time
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Use a non-GUI backend for Streamlit
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
