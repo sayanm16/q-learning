@@ -2,9 +2,15 @@ import streamlit as st
 import time
 import numpy as np
 import matplotlib
-matplotlib.use('Agg')  # Use a non-GUI backend for Streamlit
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
+import sys
+
+try:
+    import matplotlib.pyplot as plt
+    import matplotlib.patches as patches
+    matplotlib.use('Agg')  # Use a non-GUI backend for Streamlit
+except ImportError:
+    st.error("Matplotlib is not installed. Please install it using 'pip install matplotlib'.")
+    sys.exit(1)
 
 # Maze representation
 maze = np.array([
