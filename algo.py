@@ -1,3 +1,4 @@
+pip install matplotlib
 import streamlit as st
 import time
 import numpy as np
